@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "DataPassing";
+}
+
+<h2>DataPassing</h2>
+<table>
+    <tr>
+        <td>ViewData</td>
+    </tr>
+    @foreach (CabBookingEntity.CabEntity result in (List<CabBookingEntity.CabEntity>)ViewData["cab"])
+    {
+        <tr>
+            <td>
+                @result.LocationId
+            </td>
+            <td>
+                @result.Location
+            </td>
+        </tr>
+
+    }
+</table>
+<table>
+    <tr>
+        <td>
+            TempData
+        </td>
+    </tr>
+
+    @foreach (CabBookingEntity.CabEntity result in (List<CabBookingEntity.CabEntity>)TempData["cab"])
+    {
+        <tr>
+            <td>
+                @result.LocationId
+            </td>
+            <td>
+                @result.Location
+            </td>
+        </tr>
+
+    }
+</table>
+<table>
+    <tr>
+        <td>
+            ViewBag
+        </td>
+    </tr>
+    @foreach (CabBookingEntity.CabEntity result in ViewBag.cab)
+    {
+        <tr>
+            <td>
+                @result.LocationId
+            </td>
+            <td>
+                @result.Location
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+
+
+
+
