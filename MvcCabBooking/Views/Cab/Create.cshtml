@@ -1,0 +1,37 @@
+﻿@model CabBookingEntity.CabEntity
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Create", "Cab", FormMethod.Post))
+{<table cellpadding="10">
+        <tr>
+            <td>
+                @Html.Label("Location Id");
+            </td>
+            <td>
+                @Html.TextBoxFor(Model => Model.LocationId)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Location");
+            </td>
+            <td>
+                @Html.TextBoxFor(Model => Model.Location)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.ActionLink("Back", "DataPassing")
+            </td>
+            <td>
+                <input type="submit" id="submit" />
+            </td>
+        </tr>
+    </table>
+}
+

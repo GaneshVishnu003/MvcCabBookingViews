@@ -20,5 +20,24 @@ namespace CabBookingDAL
         {
             return list;
         }
+        public static void Add(CabEntity cab)
+        {
+            list.Add(cab);
+        }
+        public static void Delete(int locationId)
+        {
+            CabEntity cab = GetLocationById(locationId);
+            if (cab != null)
+                list.Remove(cab);
+        }
+        public static void Update(CabEntity cab)
+        {
+            CabEntity cabEntity = list.Find(id => id.LocationId == cab.LocationId);
+            cabEntity.Location = cab.Location;
+        }
+        public static CabEntity GetLocationById(int locationId)
+        {
+            return list.Find(id => id.LocationId == locationId);
+        }
     }
 }

@@ -1,0 +1,33 @@
+﻿@model CabBookingDAL.CabRepository
+
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display</h2>
+@Html.ActionLink("Add Location Details", "Create")
+<br />
+<br />
+<table>
+
+    @foreach (CabBookingEntity.CabEntity result in (List<CabBookingEntity.CabEntity>)TempData["cab"])
+    {
+        <tr>
+            <td>
+                @result.LocationId
+            </td>
+            <td>
+                @result.Location
+            </td>
+            
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = result.LocationId })|
+                @Html.ActionLink("Delete", "Delete", new { id = result.LocationId })
+            </td>
+        </tr>
+
+    }
+</table>
+
+
+

@@ -1,0 +1,30 @@
+﻿@model CabBookingEntity.CabEntity
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm("Update", "Cab", FormMethod.Post))
+{
+    @Html.HiddenFor(Model => Model.LocationId);
+    <table cellpadding="10">
+        <tr>
+            <td>
+                Employee Name
+            </td>
+            <td>
+                @Html.EditorFor(Model => Model.Location)
+            </td>
+        </tr>
+                <tr>
+            <td>
+                @Html.ActionLink("Cancel", "Display")
+            </td>
+            <td>
+                <input type="submit" id="submit" />
+            </td>
+        </tr>
+    </table>
+}
+
