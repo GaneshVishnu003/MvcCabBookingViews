@@ -33,8 +33,11 @@ namespace MvcCabBooking.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(CabEntity cab)
+        public ActionResult CreateLocation()
         {
+            CabEntity cab = new CabEntity();
+            UpdateModel(cab);
+            //int locationId=cab[
             CabRepository.Add(cab);
             TempData["Result"] = "Added successfully";
             return RedirectToAction("DataPassing");
