@@ -1,0 +1,71 @@
+﻿@model CabBookingEntity.UserEntity
+
+@{
+    ViewBag.Title = "SignUp";
+}
+
+<h2>SignUp</h2>
+@using (Html.BeginForm("SignUp", "Cab", FormMethod.Post))
+{
+<table cellpadding="10">
+    <tr>
+        <td>
+            @Html.Label("First Name");
+        </td>
+        <td>
+            @Html.TextBoxFor(Model => Model.FirstName)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            @Html.Label("Last Name");
+        </td>
+        <td>
+            @Html.TextBoxFor(Model => Model.LastName)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.Label("Mobile Number");
+        </td>
+        <td>
+            @Html.TextBoxFor(Model => Model.MobileNumber)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.Label("Mail Id");
+        </td>
+        <td>
+            @Html.TextBoxFor(Model => Model.MailId)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.Label("Password");
+        </td>
+        <td>
+            @Html.TextBoxFor(Model => Model.Password)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.Label("Confirm Password");
+        </td>
+        <td>
+            @Html.TextBoxFor(Model => Model.ConfirmPassword)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.Label("Role");
+        </td>
+        <td>
+            @Html.EnumDropDownListFor(Model => Model.UserRole, "Role");
+        </td>
+    </tr>
+</table>
+}
+
+
