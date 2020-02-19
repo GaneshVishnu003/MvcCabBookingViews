@@ -21,6 +21,11 @@ namespace MvcCabBooking.Controllers
         {
             return View();
         }
+        public ActionResult SignIn()
+        {
+            return View();
+        }
+
         public ActionResult DataPassing()
         {
             IEnumerable<CabEntity> cab = CabRepository.GetLocation();

@@ -1,1 +1,36 @@
-﻿
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        header {
+            height: 50px;
+            width: 100%;
+            background-color: orange;
+        }
+
+        nav {
+            float: left;
+            width: 200px;
+            height: 300px;
+            background-color: darkseagreen;
+        }
+
+    </style>
+</head>
+<body>
+    <header style="text-align:center">
+        <h1>Online Cab Booking</h1>
+    </header>
+    <nav>
+        @Html.ActionLink("Sign In", "SignIn")<br /><br />
+        @Html.ActionLink("Sign Up", "SignUp")
+
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

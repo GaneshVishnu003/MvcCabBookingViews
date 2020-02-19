@@ -134,6 +134,7 @@
     <Content Include="Views\Cab\Display.cshtml" />
     <Content Include="Views\Shared\_MasterView.cshtml" />
     <Content Include="Views\Cab\SignUp.cshtml" />
+    <Content Include="Views\Cab\SignIn.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

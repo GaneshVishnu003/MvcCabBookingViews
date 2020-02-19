@@ -40,4 +40,5 @@ namespace CabBookingDAL
             return list.Find(id => id.LocationId == locationId);
         }
     }
+    
 }
