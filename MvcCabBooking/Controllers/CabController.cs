@@ -59,7 +59,7 @@ namespace MvcCabBooking.Controllers
             CabRepository.Add(cab);
             TempData["Result"] = "Added successfully";
             return RedirectToAction("DataPassing");
-        }
+        } 
         [HttpGet]
         public ActionResult Edit(int id)
         {
