@@ -16,10 +16,18 @@ namespace MvcCabBooking.Controllers
             IEnumerable<CabEntity> cabEntities = CabRepository.GetLocation();
             return View(cabEntities);
         }
- 
         public ActionResult SignUp()
         {
             return View();
+        }
+        [HttpPost]
+        public ActionResult SignUp(UserEntity user)
+        {
+            if (ModelState.IsValid)
+            {
+                ViewBag.Message = "Success";
+            }
+            return View(user);
         }
         public ActionResult SignIn()
         {
