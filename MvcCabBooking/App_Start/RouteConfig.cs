@@ -15,7 +15,7 @@ namespace MvcCabBooking
 
             routes.MapRoute(
                 name: "Default",
-                url: "{Cab}/{action}/{id}",
+                url: "{Controller}/{action}/{id}",
                 defaults: new { controller = "Cab", action = "SignUp", id = UrlParameter.Optional }
             );
         }

@@ -8,30 +8,33 @@
 
 @using (Html.BeginForm("SignIn", "Cab", FormMethod.Post))
 {
-    <table cellpadding="10">
-        <tr>
-            <td>
-                @Html.Label("User Name")
-            </td>
-            <td>
-                @Html.TextBoxFor(Model => Model.MailId)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                @Html.Label("Password")
-            </td>
-            <td>
-                @Html.TextBoxFor(Model => Model.Password)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="submit" />
-            </td>
-        </tr>
-    </table>
-}
+        <table cellpadding="10">
+            <tr>
+                <td>
+                    @Html.Label("User Name")
+                </td>
+                <td>
+                    @Html.TextBoxFor(Model => Model.MailId)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Password")
+                </td>
+                <td>
+                    @Html.TextBoxFor(Model => Model.Password)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" />
+                </td>
+            </tr>
+        </table>
+    <div>
+        @Html.Partial("_LocationsTable")
+    </div>
+    }
 
 
 

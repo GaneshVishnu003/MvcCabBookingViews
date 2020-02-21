@@ -29,6 +29,7 @@ namespace MvcCabBooking.Controllers
             }
             return View(user);
         }
+        [HttpGet]
         public ActionResult SignIn()
         {
             return View();
