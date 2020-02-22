@@ -47,6 +47,7 @@ namespace MvcCabBooking.Controllers
         {
             return View();
         }
+
         public ActionResult Create()
         {
             return View();
@@ -62,7 +63,7 @@ namespace MvcCabBooking.Controllers
             return RedirectToAction("DataPassing");
         } 
         [HttpGet]
-        public ActionResult Edit(int id)
+        public ActionResult Edit([Bind(Exclude = "LocationId")]int id)
         {
             CabEntity cab = CabRepository.GetLocationById(id);
             return View(cab);
@@ -76,7 +77,7 @@ namespace MvcCabBooking.Controllers
             return RedirectToAction("DataPassing");
         }
         [HttpPost]
-        public ActionResult Update(CabEntity cab)
+        public ActionResult Update([Bind(Include="Location")]CabEntity cab)
         {
             CabRepository.Update(cab);
             return RedirectToAction("DataPassing");
