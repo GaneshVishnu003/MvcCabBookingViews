@@ -8,6 +8,8 @@
 <h2>SignUp</h2>
 @using (Html.BeginForm("SignUp", "Cab", FormMethod.Post))
 {
+    if (!IsPost)
+    {
 <table cellpadding="10">
     <tr>
         <td>
@@ -15,7 +17,7 @@
         </td>
         <td>
             @Html.TextBoxFor(Model => Model.FirstName)
-            @Html.ValidationMessageFor(model=>model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
         </td>
     </tr>
 
@@ -80,6 +82,16 @@
         </td>
     </tr>
 </table>
+    }
+    else
+    {
+        <h1>@ViewBag.Message</h1>
+        <table>
+            <tr>
+                <td>Name</td><td>@Model.FirstName</td>
+            </tr>
+        </table>
+    }
 <div>
     @Html.Partial("_LocationsTable")
 </div>

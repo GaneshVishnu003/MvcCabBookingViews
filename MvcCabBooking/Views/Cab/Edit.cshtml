@@ -7,9 +7,12 @@
 <h2>Edit</h2>
 @using (Html.BeginForm("Update", "Cab", FormMethod.Post))
 {
-    @Html.HiddenFor(Model => Model.LocationId);
+    //@Html.HiddenFor(Model => Model.LocationId);
     <table cellpadding="10">
         <tr>
+            <td>
+                @Html.TextBoxFor(Model=>Model.LocationId)
+            </td>
             <td>
                 Location Name
             </td>

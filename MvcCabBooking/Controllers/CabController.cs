@@ -18,6 +18,7 @@ namespace MvcCabBooking.Controllers
         }
         public ActionResult SignUp()
         {
+            IEnumerable<UserEntityDb> user = UserRepository.GetDetails();
             return View();
         }
         [HttpPost]
@@ -77,8 +78,9 @@ namespace MvcCabBooking.Controllers
             return RedirectToAction("DataPassing");
         }
         [HttpPost]
-        public ActionResult Update([Bind(Include="Location")]CabEntity cab)
+        public ActionResult Update(CabEntity cab)
         {
+            int id = cab.LocationId;
             CabRepository.Update(cab);
             return RedirectToAction("DataPassing");
         }

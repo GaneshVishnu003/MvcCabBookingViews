@@ -12,7 +12,6 @@ namespace CabBookingEntity
         public int LocationId { get; set; }
         public string Location { get; set; }
     }
-
     public enum Role
     {
         Driver,
@@ -28,7 +27,7 @@ namespace CabBookingEntity
         [StringLength(26)]
         public string LastName { get; set; }
         [Required]
-        [Phone]
+        ///[Phone]
         public long MobileNumber { get; set; }
         [Required]
         [EmailAddress]
