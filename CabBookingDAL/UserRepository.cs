@@ -13,5 +13,11 @@ namespace CabBookingDAL
             UserContext userContext = new UserContext();
             return userContext.UserEntity.ToList();
         }
+        public static void AddData(UserEntityDb obj)
+        {
+            UserContext context = new UserContext();
+            context.UserEntity.Add(obj);
+            context.SaveChanges();
+        }
     }
 }

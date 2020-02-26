@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MvcCabBooking.Controllers
 {
+    [HandleError]
     public class CabController : Controller
     {
         // GET: Cab
@@ -22,10 +23,11 @@ namespace MvcCabBooking.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult SignUp(UserEntity user)
+        public ActionResult SignUp(UserEntityDb user)
         {
             if (ModelState.IsValid)
             {
+                UserRepository.AddData(user);
                 ViewBag.Message = "Success";
             }
             return View(user);

@@ -32,8 +32,8 @@ namespace CabBookingDAL
         }
         public static void Update(CabEntity cab)
         {
-            
-            CabEntity cabEntity = list.Find(id=>id.LocationId == cab.LocationId);
+
+            CabEntity cabEntity = list.Find(id => id.LocationId == cab.LocationId);
             cabEntity.Location = cab.Location;
         }
         public static CabEntity GetLocationById(int locationId)

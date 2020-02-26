@@ -1,4 +1,4 @@
-﻿@model CabBookingEntity.UserEntity
+﻿@model CabBookingEntity.UserEntityDb
 
 @{
     ViewBag.Title = "SignUp";
@@ -86,11 +86,6 @@
     else
     {
         <h1>@ViewBag.Message</h1>
-        <table>
-            <tr>
-                <td>Name</td><td>@Model.FirstName</td>
-            </tr>
-        </table>
     }
 <div>
     @Html.Partial("_LocationsTable")

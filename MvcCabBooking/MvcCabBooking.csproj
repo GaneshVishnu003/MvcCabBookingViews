@@ -116,6 +116,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CabController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -144,6 +145,8 @@
     <Content Include="Views\Cab\SignUp.cshtml" />
     <Content Include="Views\Cab\SignIn.cshtml" />
     <Content Include="Views\Shared\_LocationsTable.cshtml" />
+    <Content Include="Views\Error\ErrorHandler.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
